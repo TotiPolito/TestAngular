@@ -1,51 +1,47 @@
 # Angular Lab
 
-Mini laboratorio interactivo para practicar Angular con ejemplos que podés probar y ver reflejados en el código.
+Mini laboratorio interactivo para practicar Angular 19. Cada lección combina una acción en pantalla, una explicación y fragmentos comentados del código que la produce.
 
-Incluye **señales**, **data binding**, **rutas**, **servicios**, **Observables** y **pipes**, con explicaciones en español y fragmentos de código comentados.
+## Requisitos
 
-## Empezar
+- Node.js (versión compatible con Angular 19).
+- npm, incluido con Node.js.
+- Conexión a internet la primera vez para instalar dependencias. La lección de HttpClient también consulta una API pública.
 
-Necesitás [Node.js](https://nodejs.org/) instalado. Al instalarlo también tendrás `npm`.
+## Iniciar la web
+
+1. Descargá o cloná este repositorio.
+2. Abrí una terminal en la carpeta del proyecto (donde está `package.json`).
+3. Instalá las dependencias y arrancá el servidor:
 
 ```bash
-git clone https://github.com/TotiPolito/TestAngular.git
-cd TestAngular
 npm install
 npm start
 ```
 
-La aplicación se abre en [http://localhost:4200](http://localhost:4200). Si el navegador no se abre automáticamente, pegá esa dirección. Para detener el servidor, volvé a la terminal y presioná `Ctrl+C`.
+4. Abrí [http://localhost:4200](http://localhost:4200) en el navegador. Para apagar el servidor, volvé a la terminal y presioná `Ctrl+C`.
 
-También podés descargar el repo como ZIP desde GitHub. Descomprimilo, abrí una terminal dentro de la carpeta `TestAngular` y ejecutá `npm install` y `npm start`.
+## Recorrido sugerido
 
-## Qué vas a encontrar
+1. **¿Qué es Angular?** — piezas principales y navegación SPA.
+2. **Standalone vs NgModules** — dos formas de organizar dependencias.
+3. **Rutas** — enlaces, rutas con parámetros y navegación sin recargar.
+4. **Señales** — estado reactivo con `signal` y `computed`.
+5. **Data binding** — interpolación, propiedades, eventos y `ngModel`.
+6. **Servicios y Observables** — lógica compartida y flujo de datos.
+7. **HttpClient** — petición GET real, estado de carga y errores.
+8. **Pipes** — formato para mostrar valores en plantillas.
 
-- **Señales:** cambiá el contador y observá cómo se actualizan el estado y sus valores derivados.
-- **Data binding:** editá un nombre y seguí cómo llega desde el campo a la vista.
-- **Rutas:** navegá entre módulos con la barra superior.
-- **Servicios y Observables:** la lista local aparece al instante. El botón de simulación agrega una demora opcional para mostrar cómo se ve una respuesta de servidor; el servicio no agrega esperas por sí mismo.
-- **Pipes:** cambiá un texto y compará el valor original con el resultado formateado.
+## Dónde mirar el código
 
-## Comandos
+- `src/app/app.routes.ts`: rutas y carga diferida con `loadComponent`.
+- `src/app/pages/angular.component.ts`: mapa de conceptos de Angular.
+- `src/app/pages/standalone.component.ts`: comparación interactiva de los estilos.
+- `src/app/pages/routes.component.ts` y `route-example.component.ts`: navegación y parámetros.
+- `src/app/pages/signals.component.ts`: `signal`, `computed`, `set` y `update`.
+- `src/app/pages/binding.component.ts`: tipos de data binding.
+- `src/app/course.service.ts` y `src/app/pages/data.component.ts`: servicio, estado y Observable.
+- `src/app/posts.service.ts` y `src/app/pages/http-client.component.ts`: HttpClient y petición GET a JSONPlaceholder.
+- `src/app/reading-time.pipe.ts` y `src/app/pages/pipes.component.ts`: pipe personalizado y pipes integrados.
 
-```bash
-npm start       # inicia el servidor de desarrollo
-npm run build   # compila la aplicación para producción
-```
-
-## Recorrido del código
-
-| Archivo | Qué muestra |
-| --- | --- |
-| `src/app/app.routes.ts` | Rutas y páginas de la aplicación |
-| `src/app/pages/signals.component.ts` | `signal`, `computed`, `set` y `update` |
-| `src/app/pages/binding.component.ts` | Interpolación, property, event y two-way binding |
-| `src/app/course.service.ts` | Servicio compartido, datos y Observable |
-| `src/app/pages/data.component.ts` | Consumo del servicio y `async` pipe |
-| `src/app/pages/pipes.component.ts` | Pipes integrados y personalizado |
-| `src/app/reading-time.pipe.ts` | Implementación del pipe `readingTime` |
-
-## Tecnologías
-
-Angular 19 · TypeScript · RxJS · SCSS · componentes standalone
+La lección de servicios tiene una espera opcional para mostrar cómo se representa una respuesta asíncrona. HttpClient, en cambio, hace una petición real a internet solo cuando tocás el botón; si una lista ya está en memoria, no necesita esperar ni hacer una petición.

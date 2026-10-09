@@ -1,0 +1,61 @@
+.page-intro { margin: 2.3rem 0 1.5rem; }
+.page-intro h1 { margin: .45rem 0 .65rem; }
+.page-intro p { max-width: 760px; color: #667085; line-height: 1.7; }
+.angular-definition, .standalone-plain, .http-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.angular-definition { grid-template-columns: 72px 1fr; align-items: center; background: #fff; border: 1px solid #e8eaf1; border-radius: 18px; padding: 1.4rem; margin-bottom: 1.1rem; }
+.definition-mark { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 17px; background: #f0eaff; color: #7249c6; font-size: 2rem; font-weight: 800; }
+.angular-definition p { margin: .45rem 0; line-height: 1.65; }
+.angular-definition small { color: #73798a; }
+.angular-map { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin: 1.1rem 0; }
+.angular-map > a, .angular-map > div { display: grid; gap: .35rem; flex: 1; min-width: 0; padding: 1rem; border: 1px solid #e8eaf1; border-radius: 14px; text-decoration: none; color: inherit; background: #fff; }
+.angular-map > a:hover { border-color: #9274d7; transform: translateY(-2px); }
+.angular-map b { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; color: #6748a8; background: #f0eaff; font-size: .75rem; }
+.angular-map small { color: #73798a; }
+.angular-map > span { color: #a4a8b5; }
+.secondary-map { margin-top: 0; }
+.expanded-concept { margin-bottom: .75rem; }
+.next-lesson { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin: 1.2rem 0 2rem; padding: 1rem 1.2rem; border-radius: 14px; background: #f0eaff; color: #59428c; }
+.next-lesson a { color: #59428c; font-weight: 700; text-decoration: none; }
+.standalone-plain > p { margin: 0; padding: 1rem; background: #fff; border: 1px solid #e8eaf1; border-radius: 13px; line-height: 1.6; }
+.comparison-card { margin: 1rem 0; }
+.comparison-tabs { display: flex; gap: .5rem; border-bottom: 1px solid #e8eaf1; padding: .6rem 0; }
+.comparison-tabs button { border: 0; border-radius: 9px; background: #f3f4f8; padding: .65rem 1rem; color: #53596b; cursor: pointer; }
+.comparison-tabs button.selected { background: #6849a9; color: white; }
+.comparison-content { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1.2rem; padding: 1.2rem 0; }
+.comparison-explanation p, .comparison-explanation li { color: #646b7c; line-height: 1.6; }
+.comparison-code, .topic-code { display: block; overflow-x: auto; padding: 1rem; border-radius: 12px; background: #202132; color: #eff0f7; line-height: 1.65; font-size: .85rem; }
+.concept-note { display: flex; gap: .6rem; align-items: flex-start; padding: .9rem 1rem; border-radius: 12px; background: #f7f3ff; color: #5d4b83; line-height: 1.6; }
+.route-demo-links { display: grid; gap: .65rem; }
+.route-demo-links a { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: .85rem 1rem; border: 1px solid #e8eaf1; border-radius: 12px; color: #3e4658; text-decoration: none; }
+.route-demo-links a:hover { border-color: #648c72; background: #f6fbf7; }
+.route-demo-links b { color: #53775f; font-size: .83rem; }
+.guide-hint { color: #707789; }
+.route-flow { display: flex; align-items: center; gap: .55rem; }
+.route-flow > div { display: grid; gap: .45rem; flex: 1; min-width: 0; padding: .9rem; background: #f8f8fb; border-radius: 12px; }
+.route-flow > div > span, .param-grid span { color: #818698; font-size: .69rem; font-weight: 700; letter-spacing: .06em; }
+.route-flow code { font-weight: 700; }
+.route-flow small { color: #747b8b; line-height: 1.45; }
+.route-flow > b { color: #7c67aa; }
+.route-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; margin-top: 1rem; }
+.route-facts div { display: grid; gap: .35rem; padding: .8rem; background: #fff; border: 1px solid #ececf1; border-radius: 11px; }
+.route-facts span { color: #72798a; font-size: .88rem; line-height: 1.45; }
+.param-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.param-grid > div { display: grid; gap: .6rem; padding: 1.2rem; border-radius: 14px; background: #f8f8fb; }
+.param-grid strong { font-size: 2rem; color: #6348a0; }
+.back-link { display: inline-block; margin: 1rem 0; color: #604a93; text-decoration: none; font-weight: 700; }
+.http-columns { margin: 1rem 0; }
+.http-error { color: #a33238; padding: .7rem; background: #fff0f0; border-radius: 9px; }
+.http-results { display: grid; gap: .7rem; margin-top: 1rem; }
+.http-post { padding: 1rem; border: 1px solid #e8eaf1; border-radius: 12px; background: #fff; }
+.http-post span { color: #7c8292; font-size: .8rem; }
+.http-post h3 { margin: .45rem 0; text-transform: capitalize; }
+.http-post p { margin: 0; color: #676e7e; line-height: 1.55; }
+@media (max-width: 760px) {
+  .angular-definition, .standalone-plain, .http-columns, .comparison-content { grid-template-columns: 1fr; }
+  .angular-map { flex-wrap: wrap; }
+  .angular-map > a, .angular-map > div { flex-basis: 38%; }
+  .route-flow { align-items: stretch; flex-direction: column; }
+  .route-flow > b { transform: rotate(90deg); align-self: center; }
+  .route-demo-links a { align-items: flex-start; flex-direction: column; }
+  .next-lesson { align-items: flex-start; flex-direction: column; }
+}
